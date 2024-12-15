@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de la Oca</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Juego de la Oca</h1>
+    <div class="board">
+      <!-- 63 casillas del tablero, con id cell-X -->
+      <div id="cell-1" class="cell">1</div>
+      <div id="cell-2" class="cell">2</div>
+      <div id="cell-3" class="cell">3</div>
+      <div id="cell-4" class="cell">4</div>
+      <div id="cell-5" class="cell">5</div>
+      <!-- Añadir más celdas hasta la 63 -->
+      <div id="cell-63" class="cell">63</div>
+    </div>
+    <div class="controls">
+      <p>Turno de Jugador: <span id="currentPlayer">1</span></p>
+      <button id="rollButton">Tirar dado</button>
+      <div id="diceResult">Lanza el dado</div>
+    </div>
+    <div class="player">
+      <p>Jugador: <span id="playerPosition">1</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

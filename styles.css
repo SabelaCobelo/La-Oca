@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    position: relative;
+  }
+  
+  .cell:nth-child(odd) {
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilos especiales para las casillas del juego */
+  .oca {
+    background-color: #ffeb3b;
+  }
+  
+  .puente {
+    background-color: #4caf50;
+  }
+  
+  .carcel {
+    background-color: #f44336;
+  }
+  
+  .controls {
+    margin: 20px 0;
+  }
+  
+  #rollButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  #diceResult {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .player p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Animaciones */
+  @keyframes movePlayer {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(var(--move-to));
+    }
+  }
+  
+  .player {
+    display: inline-block;
+    margin-top: 20px;
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    transition: transform 0.3s ease;
+  }
+  
